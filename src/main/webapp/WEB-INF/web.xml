@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <welcome-file-list>
+        <welcome-file>info.webappborysevychlab_2.servlets.InitStudentTableServlet</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>DeleteStudentServlet</servlet-name>
+        <servlet-class>info.webappborysevychlab_2.servlets.DeleteStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteStudentServlet</servlet-name>
+        <url-pattern>/DeleteStudentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>InitStudentTableServlet</servlet-name>
+        <servlet-class>info.webappborysevychlab_2.servlets.InitStudentTableServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InitStudentTableServlet</servlet-name>
+        <url-pattern>/InitStudentTableServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>InsertStudentServlet</servlet-name>
+        <servlet-class>info.webappborysevychlab_2.servlets.InsertStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertStudentServlet</servlet-name>
+        <url-pattern>/InsertStudentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SortStudentTableServlet</servlet-name>
+        <servlet-class>info.webappborysevychlab_2.servlets.SortStudentTableServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SortStudentTableServlet</servlet-name>
+        <url-pattern>/SortStudentTableServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateStudentServlet</servlet-name>
+        <servlet-class>info.webappborysevychlab_2.servlets.UpdateStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateStudentServlet</servlet-name>
+        <url-pattern>/UpdateStudentServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
