@@ -51,7 +51,7 @@ public class SortStudentTableServlet extends HttpServlet {
             default -> throw new IllegalStateException("Unexpected value: " + method);
         }
         request.setAttribute("studentList", studentList);
-        response.sendRedirect(getServletContext() + "/studentTable.jsp");
+        response.sendRedirect(getServletContext() + "/studentTable");
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
