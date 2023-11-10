@@ -110,12 +110,12 @@
                         <td> <%= studentAddPart.getEmail() %> </td>
                         <td> <%= studentAddPart.getPhone() %> </td>
                         <td>
-                            <form action="UpdateStudentServlet">
+                            <form action="UpdateStudentServlet" method="post">
                                 <input type="submit" value="Update">
                             </form>
                         </td>
                         <td>
-                            <form action="DeleteStudentServlet">
+                            <form action="DeleteStudentServlet" method="post">
                                 <input type="submit" value="Delete">
                             </form>
                         </td>

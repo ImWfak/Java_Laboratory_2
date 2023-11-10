@@ -40,7 +40,7 @@
 
             <input type="submit" value="Insert" onclick="">
         </form>
-        <form action="studentTable.jsp">
+        <form action="InitStudentTableServlet">
             <input type="submit" value="Cancel">
         </form>
     </body>
