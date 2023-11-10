@@ -18,6 +18,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>InitStudentServlet</servlet-name>
+        <servlet-class>info.webappborysevychlab_2.servlets.InitStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InitStudentServlet</servlet-name>
+        <url-pattern>/InitStudentServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>InitStudentTableServlet</servlet-name>
         <servlet-class>info.webappborysevychlab_2.servlets.InitStudentTableServlet</servlet-class>
     </servlet>
@@ -33,6 +42,15 @@
     <servlet-mapping>
         <servlet-name>InsertStudentServlet</servlet-name>
         <url-pattern>/InsertStudentServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchStudentServlet</servlet-name>
+        <servlet-class>info.webappborysevychlab_2.servlets.SearchStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchStudentServlet</servlet-name>
+        <url-pattern>/SearchStudentServlet</url-pattern>
     </servlet-mapping>
 
     <servlet>

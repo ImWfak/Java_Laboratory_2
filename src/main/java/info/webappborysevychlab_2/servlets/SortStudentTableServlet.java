@@ -16,8 +16,8 @@ public class SortStudentTableServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Student> studentList = new StudentDAO().getAllList();
-        String method = request.getParameter("method");
-        switch (method) {
+        String sort = request.getParameter("sort");
+        switch (sort) {
             case "Surname" -> studentList.sort(
                     (firstStudent, secondStudent) -> firstStudent.getStudentMainPart().getSurname().compareToIgnoreCase(secondStudent.getStudentMainPart().getSurname())
             );
@@ -48,7 +48,7 @@ public class SortStudentTableServlet extends HttpServlet {
             case "Phone" -> studentList.sort(
                     (firstStudent, secondStudent) -> firstStudent.getStudentAddPart().getPhone().compareToIgnoreCase(secondStudent.getStudentAddPart().getPhone())
             );
-            default -> throw new IllegalStateException("Unexpected value: " + method);
+            default -> throw new IllegalStateException("Unexpected value: " + sort);
         }
         request.setAttribute("studentList", studentList);
         request.getServletContext().getRequestDispatcher("/studentTable.jsp").forward(request, response);

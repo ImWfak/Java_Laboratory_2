@@ -12,21 +12,21 @@
     </head>
     <body>
         <header>
-            <label for="inputField"></label>
-            <input type="text" id="inputField" placeholder="Enter text">
-            <label for="dropdownMenu"></label>
-            <select id="dropdownMenu">
-                <option value="Surname" name="method">Surname</option>
-                <option value="Name" name="method">Name</option>
-                <option value="Lastname" name="method">Lastname</option>
-                <option value="Birthday" name="method">Birthday</option>
-                <option value="Gender" name="method">Gender</option>
-                <option value="Rank" name="method">Rank</option>
-                <option value="Contract" name="method">Contract</option>
-                <option value="Scholarship" name="method">Scholarship</option>
-                <option value="Email" name="method">Email</option>
-                <option value="Phone" name="method">Phone</option>
-            </select>
+            <form action="SearchStudentServlet" method="get">
+                <label for="inputField"></label>
+                <input type="text" name="searchText" id="inputField" placeholder="Input text">
+                <label for="dropdownMenu"></label>
+                <select name="searchOption" id="dropdownMenu">
+                    <option value="surname">Surname</option>
+                    <option value="name">Name</option>
+                    <option value="lastname">Lastname</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="rank">Rank</option>
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                </select>
+                <input type="submit" value="Search">
+            </form>
             <form action="insertStudent.jsp">
                 <button>Insert</button>
             </form>
@@ -36,53 +36,53 @@
             <tr>
                 <th>
                     <form action="SortStudentTableServlet" method="get">
-                        <input type="submit" name="method" value="Surname">
+                        <input type="submit" name="sort" value="Surname">
                     </form>
                 </th>
                 <th>
                     <form action="SortStudentTableServlet" method="get">
-                        <input type="submit" name="method" value="Name">
+                        <input type="submit" name="sort" value="Name">
                     </form>
                 </th>
                 <th>
                     <form action="SortStudentTableServlet" method="get">
-                        <input type="submit" name="method" value="Lastname">
+                        <input type="submit" name="sort" value="Lastname">
                     </form>
                 </th>
                 <th>
                     <form action="SortStudentTableServlet" method="get">
-                        <input type="submit" name="method" value="Birthday">
+                        <input type="submit" name="sort" value="Birthday">
                     </form>
                 </th>
                 <th>
                     <form action="SortStudentTableServlet" method="get">
-                        <input type="submit" name="method" value="Gender">
+                        <input type="submit" name="sort" value="Gender">
                     </form>
                 </th>
                 <th>
                     <form action="SortStudentTableServlet" method="get">
-                        <input type="submit" name="method" value="Rank">
+                        <input type="submit" name="sort" value="Rank">
                     </form>
                 </th>
 
                 <th>
                     <form action="SortStudentTableServlet" method="get">
-                        <input type="submit" name="method" value="Contract">
+                        <input type="submit" name="sort" value="Contract">
                     </form>
                 </th>
                 <th>
                     <form action="SortStudentTableServlet" method="get">
-                        <input type="submit" name="method" value="Scholarship">
+                        <input type="submit" name="sort" value="Scholarship">
                     </form>
                 </th>
                 <th>
                     <form action="SortStudentTableServlet" method="get">
-                        <input type="submit" name="method" value="Email">
+                        <input type="submit" name="sort" value="Email">
                     </form>
                 </th>
                 <th>
                     <form action="SortStudentTableServlet" method="get">
-                        <input type="submit" name="method" value="Phone">
+                        <input type="submit" name="sort" value="Phone">
                     </form>
                 </th>
 
@@ -110,7 +110,8 @@
                         <td> <%= studentAddPart.getEmail() %> </td>
                         <td> <%= studentAddPart.getPhone() %> </td>
                         <td>
-                            <form action="UpdateStudentServlet" method="post">
+                            <form action="InitStudentServlet" method="get">
+                                <input type="hidden" name="id" value="<%= student.getId() %>">
                                 <input type="submit" value="Update">
                             </form>
                         </td>
