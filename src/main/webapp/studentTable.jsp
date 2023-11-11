@@ -85,7 +85,6 @@
                         <input type="submit" name="sort" value="Phone">
                     </form>
                 </th>
-
                 <th class="functions" colspan="2">Functions</th>
             </tr>
             </thead>
@@ -117,6 +116,7 @@
                         </td>
                         <td>
                             <form action="DeleteStudentServlet" method="post">
+                                <input type="hidden" name="id" value="<%= student.getId() %>">
                                 <input type="submit" value="Delete">
                             </form>
                         </td>
